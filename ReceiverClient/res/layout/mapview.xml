@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+	<EditText android:id="@+id/show_status"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:hint="@string/status_hint"/>
+	
+    <com.google.android.maps.MapView
+        android:id="@+id/MapView01"
+        android:layout_below="@id/show_status"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="0SzqfPVvibgkDuQG7JhkJQY1kB1ZoHQ2ZMS35XA" />
+ <Button
+        android:id="@+id/button1"
+        android:layout_below="@id/MapView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="修改坐标" />
+</RelativeLayout>

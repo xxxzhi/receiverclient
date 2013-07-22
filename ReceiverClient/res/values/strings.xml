@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">ReceiverClient</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">ReceiverClient</string>
+	<string name="status_hint">状态提示</string>
+</resources>

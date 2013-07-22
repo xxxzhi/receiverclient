@@ -1,0 +1,43 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.receiverclient"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+	<uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:name="com.receiverclient.ReceiverApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".liuxiaohuan.googlemapapp.MapViewActivity"
+    		android:label="@string/title_activity_main">
+    		 
+        </activity>
+        <activity
+            android:name=".MapViewActivity"
+    		android:label="@string/title_activity_main">
+    		 
+        </activity>
+        <service 
+            android:exported="false"
+            android:name=".MainService">
+            <intent-filter >
+                <action android:name="mainservice"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
