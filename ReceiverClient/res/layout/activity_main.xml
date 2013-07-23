@@ -1,26 +1,97 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:id="@+id/listMenu"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="Button" />
-	<EditText 
-        android:id="@+id/ip"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/run"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_child_width"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="运行"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/set"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_child_width"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="设置"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:id="@+id/exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/menu_child_width"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="退出"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="请输入ip"
-        />
-  	<Button
-    	android:id="@+id/sure_ip"
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:text="确认ip" />
-</LinearLayout>
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/title_gray" >
+
+            <ImageView
+                android:id="@+id/menu_control"
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/menu"
+                 />
+
+            <TextView
+                android:id="@+id/titlename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                 />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/title_bar"
+            android:id="@+id/contentview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_light_gray" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

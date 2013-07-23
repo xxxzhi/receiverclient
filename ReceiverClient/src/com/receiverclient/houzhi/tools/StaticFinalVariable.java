@@ -5,7 +5,7 @@ public final class StaticFinalVariable {
 	/**
 	 * 默认服务器地址
 	 */
-	public static final String URL_Str = ":8080/SensorServer/ReturnMsg";
+	public static final String URL_Str = ":8080/Server/ReturnMsg";
 	
 	public static String IP = "125.216.245.215";
 	/**
