@@ -1,5 +1,7 @@
 package com.receiverclient;
 
+import com.receiverclient.houzhi.tools.StaticFinalVariable;
+
 import android.app.ActivityGroup;
 import android.content.Context;
 import android.content.Intent;
@@ -33,6 +35,8 @@ public class MainActivity extends ActivityGroup implements View.OnClickListener 
 		v = findViewById(R.id.exit);
 		v.setOnClickListener(this);
 
+        
+		
 		launchActivity("run", BaiduMapActivity.class, R.string.title_run);
 	}
 
